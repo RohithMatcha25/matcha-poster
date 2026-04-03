@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Matcha Poster</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+@page { size: A4 portrait; margin: 0; }
+body { width:210mm; height:297mm; background:#0a1f0e; }
+.poster {
+  width:210mm; height:297mm;
+  background: linear-gradient(160deg, #0d2b12 0%, #0a1f0e 40%, #061408 100%);
+  display:flex; flex-direction:column; align-items:center;
+  padding:10mm 10mm; position:relative; overflow:hidden;
+}
+.orb { position:absolute; border-radius:50%; filter:blur(60px); pointer-events:none; }
+.orb1 { width:180mm; height:180mm; background:#2d6e42; top:-60mm; left:-40mm; opacity:0.3; }
+.orb2 { width:100mm; height:100mm; background:#68b29b; bottom:10mm; right:-20mm; opacity:0.2; }
+.badge {
+  background:linear-gradient(135deg,#68b29b,#3a7d44);
+  color:#fff; font-family:'Lato',sans-serif; font-size:8pt;
+  font-weight:700; letter-spacing:3px; text-transform:uppercase;
+  padding:2.5mm 7mm; border-radius:20px; margin-bottom:4mm; position:relative; z-index:2;
+}
+.headline {
+  font-family:'Playfair Display',serif; text-align:center;
+  position:relative; z-index:2; margin-bottom:1mm; line-height:1.05;
+}
+.headline .l1 { display:block; font-size:40pt; font-weight:900; color:#fff;
+  text-shadow:0 2px 0 rgba(0,0,0,0.5),0 4px 12px rgba(0,0,0,0.4),0 0 40px rgba(104,178,155,0.3); }
+.headline .l2 { display:block; font-size:40pt; font-weight:900;
+  background:linear-gradient(135deg,#a8e6c0,#68b29b,#3dba6e);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  filter:drop-shadow(0 3px 8px rgba(104,178,155,0.6)); }
+.sub {
+  font-family:'Lato',sans-serif; font-size:9pt; color:rgba(255,255,255,0.7);
+  letter-spacing:2.5px; text-transform:uppercase; margin-bottom:5mm;
+  position:relative; z-index:2;
+}
+.drink-wrap {
+  position:relative; z-index:2; margin-bottom:4mm;
+  filter:drop-shadow(0 12px 30px rgba(104,178,155,0.5)) drop-shadow(0 4px 10px rgba(0,0,0,0.7));
+}
+.drink-wrap svg { width:52mm; height:auto; }
+.what-box {
+  background:rgba(104,178,155,0.1); border:1px solid rgba(104,178,155,0.3);
+  border-radius:4mm; padding:4mm 7mm; width:100%;
+  margin-bottom:4mm; position:relative; z-index:2;
+}
+.what-title {
+  font-family:'Playfair Display',serif; font-size:12pt; color:#68b29b;
+  margin-bottom:1.5mm; font-weight:700;
+}
+.what-text { font-family:'Lato',sans-serif; font-size:8pt; color:rgba(255,255,255,0.8); line-height:1.6; }
+.ben-label {
+  font-family:'Lato',sans-serif; font-size:7.5pt; letter-spacing:3px;
+  color:#68b29b; text-transform:uppercase; margin-bottom:2.5mm;
+  position:relative; z-index:2; font-weight:700;
+}
+.benefits { display:grid; grid-template-columns:1fr 1fr; gap:2.5mm; width:100%; position:relative; z-index:2; margin-bottom:5mm; }
+.benefit {
+  background:rgba(255,255,255,0.04); border:1px solid rgba(104,178,155,0.2);
+  border-radius:3mm; padding:3mm 4mm; display:flex; align-items:center; gap:3mm;
+}
+.bicon { font-size:14pt; flex-shrink:0; }
+.btext { font-family:'Lato',sans-serif; }
+.bname { font-size:8pt; color:rgba(255,255,255,0.9); font-weight:700; }
+.bsub { font-size:6.5pt; color:rgba(255,255,255,0.45); margin-top:0.5mm; }
+.cta {
+  background:linear-gradient(135deg,#68b29b,#3a7d44);
+  color:#fff; font-family:'Lato',sans-serif; font-size:11pt; font-weight:700;
+  letter-spacing:2px; text-transform:uppercase;
+  padding:4mm 14mm; border-radius:30px; display:inline-block;
+  box-shadow:0 6px 20px rgba(104,178,155,0.45),0 2px 6px rgba(0,0,0,0.5);
+  position:relative; z-index:2;
+}
+.shopname {
+  font-family:'Lato',sans-serif; font-size:7pt; color:rgba(255,255,255,0.4);
+  letter-spacing:2px; text-transform:uppercase; margin-top:2.5mm;
+  position:relative; z-index:2;
+}
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+
+  <div class="badge">✦ Now Available ✦</div>
+
+  <div class="headline">
+    <span class="l1">Matcha</span>
+    <span class="l2">Has Arrived.</span>
+  </div>
+  <div class="sub">Try it now at our shop</div>
+
+  <div class="drink-wrap">
+    <svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="liq" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#6ecf85"/>
+          <stop offset="50%" style="stop-color:#3a8f55"/>
+          <stop offset="100%" style="stop-color:#2d6e42"/>
+        </linearGradient>
+        <linearGradient id="gls" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:rgba(255,255,255,0.12)"/>
+          <stop offset="40%" style="stop-color:rgba(255,255,255,0.22)"/>
+          <stop offset="100%" style="stop-color:rgba(255,255,255,0.04)"/>
+        </linearGradient>
+        <linearGradient id="ice" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:rgba(220,245,255,0.95)"/>
+          <stop offset="100%" style="stop-color:rgba(180,225,245,0.7)"/>
+        </linearGradient>
+        <linearGradient id="foam" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#b8ecc8"/>
+          <stop offset="100%" style="stop-color:#68b29b"/>
+        </linearGradient>
+        <clipPath id="gc">
+          <path d="M50,55 L32,242 Q32,254 44,254 L156,254 Q168,254 168,242 L150,55 Z"/>
+        </clipPath>
+      </defs>
+      <!-- shadow -->
+      <ellipse cx="100" cy="266" rx="54" ry="7" fill="rgba(0,0,0,0.4)"/>
+      <!-- glass body -->
+      <path d="M50,55 L32,242 Q32,254 44,254 L156,254 Q168,254 168,242 L150,55 Z"
+        fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.22)" stroke-width="1.5"/>
+      <!-- liquid -->
+      <path d="M51,72 L33,242 Q33,252 44,252 L156,252 Q167,252 167,242 L149,72 Z"
+        fill="url(#liq)" clip-path="url(#gc)" opacity="0.92"/>
+      <!-- ice cubes -->
+      <g clip-path="url(#gc)" opacity="0.82">
+        <rect x="54" y="88" width="34" height="26" rx="5" fill="url(#ice)" transform="rotate(-8,71,101)"/>
+        <rect x="96" y="82" width="29" height="24" rx="5" fill="url(#ice)" transform="rotate(6,110,94)" opacity="0.85"/>
+        <rect x="118" y="100" width="26" height="22" rx="5" fill="url(#ice)" transform="rotate(-4,131,111)" opacity="0.78"/>
+        <rect x="57" y="116" width="23" height="20" rx="4" fill="url(#ice)" transform="rotate(10,68,126)" opacity="0.7"/>
+      </g>
+      <!-- foam top -->
+      <ellipse cx="100" cy="72" rx="49" ry="11" fill="url(#foam)" opacity="0.95"/>
+      <ellipse cx="100" cy="69" rx="47" ry="9" fill="#c8f0d8" opacity="0.55"/>
+      <!-- glass shine -->
+      <path d="M53,65 L38,205" stroke="rgba(255,255,255,0.38)" stroke-width="5" stroke-linecap="round"/>
+      <!-- glass overlay -->
+      <path d="M50,55 L32,242 Q32,254 44,254 L156,254 Q168,254 168,242 L150,55 Z" fill="url(#gls)"/>
+      <!-- rim -->
+      <ellipse cx="100" cy="55" rx="50" ry="10" fill="none" stroke="rgba(255,255,255,0.38)" stroke-width="1.5"/>
+      <!-- straw -->
+      <rect x="118" y="20" width="6" height="130" rx="3" fill="rgba(30,30,30,0.9)"/>
+      <rect x="119" y="21" width="2" height="128" rx="1" fill="rgba(255,255,255,0.12)"/>
+      <!-- condensation drops -->
+      <ellipse cx="62" cy="140" rx="2" ry="3.5" fill="rgba(255,255,255,0.25)"/>
+      <ellipse cx="70" cy="165" rx="1.5" ry="3" fill="rgba(255,255,255,0.2)"/>
+      <ellipse cx="148" cy="150" rx="2" ry="3.5" fill="rgba(255,255,255,0.2)"/>
+      <ellipse cx="140" cy="180" rx="1.5" ry="2.5" fill="rgba(255,255,255,0.18)"/>
+      <ellipse cx="57" cy="190" rx="1.5" ry="2.5" fill="rgba(255,255,255,0.15)"/>
+      <!-- tea leaves scattered -->
+      <text x="28" y="235" font-size="12" opacity="0.6">🍃</text>
+      <text x="155" y="248" font-size="10" opacity="0.5">🍃</text>
+      <text x="15" y="260" font-size="8" opacity="0.4">🌿</text>
+    </svg>
+  </div>
+
+  <div class="what-box">
+    <div class="what-title">🍵 What is Matcha?</div>
+    <div class="what-text">Matcha is finely ground Japanese green tea — packed with natural energy, powerful antioxidants, and calm focus. No jitters. No crash. Just clean, sustained energy all day.</div>
+  </div>
+
+  <div class="ben-label">✦ Why Matcha? ✦</div>
+  <div class="benefits">
+    <div class="benefit">
+      <div class="bicon">🛡️</div>
+      <div class="btext"><div class="bname">Rich in Antioxidants</div><div class="bsub">Fights free radicals</div></div>
+    </div>
+    <div class="benefit">
+      <div class="bicon">⚡</div>
+      <div class="btext"><div class="bname">Boosts Energy</div><div class="bsub">No crash, no jitters</div></div>
+    </div>
+    <div class="benefit">
+      <div class="bicon">🧘</div>
+      <div class="btext"><div class="bname">Calms the Mind</div><div class="bsub">L-theanine for focus</div></div>
+    </div>
+    <div class="benefit">
+      <div class="bicon">💪</div>
+      <div class="btext"><div class="bname">Supports Immunity</div><div class="bsub">Vitamins C, A & E</div></div>
+    </div>
+  </div>
+
+  <div class="cta">Try It Now At Our Shop</div>
+  <div class="shopname">Friends Fruit Juice &amp; Ice Cream</div>
+</div>
+</body>
+</html>
