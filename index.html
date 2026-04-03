@@ -1,97 +1,46 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Matcha Poster</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
 @page{size:A4 portrait;margin:0;}
-html,body{margin:0;padding:0;background:#071a0a;}
+html,body{margin:0;padding:0;background:#071a0a;font-family:Georgia,serif;}
 .poster{width:210mm;height:297mm;background:linear-gradient(160deg,#0d2b12 0%,#071a0a 45%,#040f06 100%);display:flex;flex-direction:column;align-items:center;padding:7mm 9mm 5mm 9mm;position:relative;overflow:hidden;}
 .orb{position:absolute;border-radius:50%;filter:blur(55px);pointer-events:none;}
 .orb1{width:160mm;height:160mm;background:#1e5c30;top:-60mm;left:-35mm;opacity:0.35;}
 .orb2{width:85mm;height:85mm;background:#3d8c6e;bottom:-5mm;right:-15mm;opacity:0.2;}
-.badge{background:linear-gradient(135deg,#5aa882,#2d6e42);color:#fff;font-family:'Lato',sans-serif;font-size:6.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:1.5mm 5mm;border-radius:20px;margin-bottom:2.5mm;position:relative;z-index:2;}
-.headline{font-family:'Playfair Display',serif;text-align:center;position:relative;z-index:2;margin-bottom:1mm;line-height:1.0;}
-.headline .l1{display:block;font-size:33pt;font-weight:900;color:#fff;text-shadow:0 2px 0 rgba(0,0,0,0.6),0 4px 14px rgba(0,0,0,0.5);}
+.badge{background:linear-gradient(135deg,#5aa882,#2d6e42);color:#fff;font-family:Arial,sans-serif;font-size:6.5pt;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:1.5mm 5mm;border-radius:20px;margin-bottom:2.5mm;position:relative;z-index:2;}
+.headline{font-family:Georgia,serif;text-align:center;position:relative;z-index:2;margin-bottom:1mm;line-height:1.0;}
+.headline .l1{display:block;font-size:33pt;font-weight:900;color:#fff;}
 .headline .l2{display:block;font-size:33pt;font-weight:900;color:#5aa882;}
-.sub{font-family:'Lato',sans-serif;font-size:7.5pt;color:rgba(255,255,255,0.65);letter-spacing:2px;text-transform:uppercase;margin-bottom:3mm;position:relative;z-index:2;}
+.sub{font-family:Arial,sans-serif;font-size:7.5pt;color:rgba(255,255,255,0.65);letter-spacing:2px;text-transform:uppercase;margin-bottom:3mm;position:relative;z-index:2;}
 .drink-wrap{position:relative;z-index:2;margin-bottom:3.5mm;}
-.drink-wrap svg{width:50mm;height:auto;display:block;margin:0 auto;}
-.what-box{background:rgba(90,168,130,0.1);border:1px solid rgba(90,168,130,0.35);border-radius:3mm;padding:3mm 5mm;width:100%;margin-bottom:2.5mm;position:relative;z-index:2;}
-.what-title{font-family:'Playfair Display',serif;font-size:10pt;color:#5aa882;margin-bottom:1mm;font-weight:700;}
-.what-text{font-family:'Lato',sans-serif;font-size:7pt;color:rgba(255,255,255,0.82);line-height:1.5;}
-.ben-label{font-family:'Lato',sans-serif;font-size:6.5pt;letter-spacing:2px;color:#5aa882;text-transform:uppercase;margin-bottom:1.8mm;position:relative;z-index:2;font-weight:700;}
+.drink-wrap img{width:42mm;height:auto;display:block;margin:0 auto;}
+.what-box{background:rgba(90,168,130,0.15);border:1px solid rgba(90,168,130,0.4);border-radius:3mm;padding:3mm 5mm;width:100%;margin-bottom:2.5mm;position:relative;z-index:2;}
+.what-title{font-family:Georgia,serif;font-size:10pt;color:#5aa882;margin-bottom:1mm;font-weight:700;}
+.what-text{font-family:Arial,sans-serif;font-size:7pt;color:rgba(255,255,255,0.85);line-height:1.5;}
+.ben-label{font-family:Arial,sans-serif;font-size:6.5pt;letter-spacing:2px;color:#5aa882;text-transform:uppercase;margin-bottom:1.8mm;position:relative;z-index:2;font-weight:700;}
 .benefits{display:grid;grid-template-columns:1fr 1fr;gap:2mm;width:100%;position:relative;z-index:2;margin-bottom:3.5mm;}
-.benefit{background:rgba(255,255,255,0.04);border:1px solid rgba(90,168,130,0.22);border-radius:2mm;padding:2.5mm 3mm;display:flex;align-items:center;gap:2mm;}
-.bicon{font-size:12pt;flex-shrink:0;line-height:1;}
-.bname{font-family:'Lato',sans-serif;font-size:7pt;color:rgba(255,255,255,0.92);font-weight:700;}
-.bsub{font-family:'Lato',sans-serif;font-size:5.5pt;color:rgba(255,255,255,0.42);margin-top:0.3mm;}
-.cta{background:linear-gradient(135deg,#5aa882,#2d6e42);color:#fff;font-family:'Lato',sans-serif;font-size:9.5pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3mm 11mm;border-radius:30px;display:inline-block;box-shadow:0 4px 16px rgba(90,168,130,0.45);position:relative;z-index:2;}
-.shopname{font-family:'Lato',sans-serif;font-size:6pt;color:rgba(255,255,255,0.38);letter-spacing:1.5px;text-transform:uppercase;margin-top:2mm;position:relative;z-index:2;}
+.benefit{background:rgba(255,255,255,0.05);border:1px solid rgba(90,168,130,0.25);border-radius:2mm;padding:2.5mm 3mm;display:flex;align-items:center;gap:2mm;}
+.bicon{font-size:13pt;flex-shrink:0;line-height:1;color:#5aa882;font-weight:bold;}
+.bname{font-family:Arial,sans-serif;font-size:7pt;color:rgba(255,255,255,0.92);font-weight:700;}
+.bsub{font-family:Arial,sans-serif;font-size:5.5pt;color:rgba(255,255,255,0.45);margin-top:0.3mm;}
+.cta{background:linear-gradient(135deg,#5aa882,#2d6e42);color:#fff;font-family:Arial,sans-serif;font-size:9.5pt;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:3mm 11mm;border-radius:30px;display:inline-block;position:relative;z-index:2;}
+.shopname{font-family:Arial,sans-serif;font-size:6pt;color:rgba(255,255,255,0.4);letter-spacing:1.5px;text-transform:uppercase;margin-top:2mm;position:relative;z-index:2;}
 </style></head><body><div class="poster">
 <div class="orb orb1"></div><div class="orb orb2"></div>
-<div class="badge">✦ Now Available ✦</div>
+<div class="badge">* Now Available *</div>
 <div class="headline"><span class="l1">Matcha</span><span class="l2">Has Arrived.</span></div>
 <div class="sub">Try it now at our shop</div>
-<div class="drink-wrap">
-<svg viewBox="0 0 160 240" xmlns="http://www.w3.org/2000/svg">
-  <!-- Shadow -->
-  <ellipse cx="80" cy="234" rx="44" ry="5" fill="#000000" fill-opacity="0.4"/>
-  <!-- Glass outer shape -->
-  <path d="M38,30 L22,212 Q22,222 32,222 L128,222 Q138,222 138,212 L122,30 Z" fill="#c8e8d8" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1.5"/>
-  <!-- ICE layer bottom -->
-  <path d="M24,175 L22,212 Q22,222 32,222 L128,222 Q138,222 138,212 L136,175 Z" fill="#b8ddf0" fill-opacity="0.75" clip-path="url(#gc2)"/>
-  <!-- Ice cubes -->
-  <g clip-path="url(#gc2)">
-    <rect x="28" y="168" width="28" height="22" rx="4" fill="#daf0ff" fill-opacity="0.85" transform="rotate(-5,42,179)"/>
-    <rect x="62" y="165" width="25" height="20" rx="4" fill="#cce8fa" fill-opacity="0.8" transform="rotate(4,74,175)"/>
-    <rect x="95" y="170" width="24" height="20" rx="4" fill="#d5edf8" fill-opacity="0.78" transform="rotate(-3,107,180)"/>
-    <!-- Ice shine lines -->
-    <line x1="31" y1="170" x2="31" y2="183" stroke="#ffffff" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="65" y1="167" x2="65" y2="178" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1.5" stroke-linecap="round"/>
-    <line x1="98" y1="172" x2="98" y2="183" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-  </g>
-  <!-- MILK layer middle -->
-  <path d="M30,115 L24,175 L136,175 L130,115 Z" fill="#f0e8d8" fill-opacity="0.82" clip-path="url(#gc2)"/>
-  <!-- Milk surface -->
-  <ellipse cx="80" cy="115" rx="51" ry="7" fill="#f5efe0" fill-opacity="0.7" clip-path="url(#gc2)"/>
-  <!-- MATCHA layer top -->
-  <path d="M38,48 L30,115 L130,115 L122,48 Z" fill="#2d7a3a" fill-opacity="0.92" clip-path="url(#gc2)"/>
-  <!-- Matcha foam top -->
-  <ellipse cx="80" cy="48" rx="43" ry="9" fill="#5aa870" fill-opacity="0.95" clip-path="url(#gc2)"/>
-  <ellipse cx="80" cy="45" rx="41" ry="7" fill="#80c890" fill-opacity="0.5" clip-path="url(#gc2)"/>
-  <!-- Glass 3D overlay - left shine -->
-  <path d="M40,35 L26,200" stroke="#ffffff" stroke-opacity="0.4" stroke-width="5" stroke-linecap="round"/>
-  <path d="M45,35 L30,180" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2.5" stroke-linecap="round"/>
-  <!-- Right shadow -->
-  <path d="M120,35 L134,200" stroke="#000000" stroke-opacity="0.18" stroke-width="5" stroke-linecap="round"/>
-  <!-- Glass body transparent overlay -->
-  <path d="M38,30 L22,212 Q22,222 32,222 L128,222 Q138,222 138,212 L122,30 Z" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1.5"/>
-  <!-- Rim top ellipse -->
-  <ellipse cx="80" cy="30" rx="42" ry="9" fill="#c8e8d0" fill-opacity="0.15" stroke="#ffffff" stroke-opacity="0.45" stroke-width="1.5"/>
-  <!-- Rim highlight -->
-  <path d="M44,27 Q80,21 116,27" fill="none" stroke="#ffffff" stroke-opacity="0.5" stroke-width="1.5" stroke-linecap="round"/>
-  <!-- Condensation -->
-  <ellipse cx="46" cy="130" rx="1.5" ry="3" fill="#ffffff" fill-opacity="0.22"/>
-  <ellipse cx="43" cy="152" rx="1.5" ry="2.5" fill="#ffffff" fill-opacity="0.18"/>
-  <ellipse cx="125" cy="140" rx="1.5" ry="3" fill="#ffffff" fill-opacity="0.18"/>
-  <ellipse cx="128" cy="165" rx="1.2" ry="2.5" fill="#ffffff" fill-opacity="0.15"/>
-  <!-- Straw -->
-  <rect x="98" y="5" width="6" height="118" rx="3" fill="#1a1a1a" fill-opacity="0.9"/>
-  <rect x="99.5" y="6" width="2" height="116" rx="1" fill="#ffffff" fill-opacity="0.18"/>
-  <clipPath id="gc2">
-    <path d="M38,30 L22,212 Q22,222 32,222 L128,222 Q138,222 138,212 L122,30 Z"/>
-  </clipPath>
-</svg>
-</div>
+<div class="drink-wrap"><img src="data:image/png;base64,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" alt="Matcha drink"/></div>
 <div class="what-box">
-  <div class="what-title">🍵 What is Matcha?</div>
-  <div class="what-text">Matcha is finely ground Japanese green tea — packed with natural energy, powerful antioxidants, and calm focus. No jitters. No crash. Just clean, sustained energy all day.</div>
+  <div class="what-title">What is Matcha?</div>
+  <div class="what-text">Matcha is finely ground Japanese green tea &mdash; packed with natural energy, powerful antioxidants, and calm focus. No jitters. No crash. Just clean, sustained energy all day.</div>
 </div>
-<div class="ben-label">✦ Why Matcha? ✦</div>
+<div class="ben-label">* Why Matcha? *</div>
 <div class="benefits">
-  <div class="benefit"><div class="bicon">🛡️</div><div><div class="bname">Rich in Antioxidants</div><div class="bsub">Fights free radicals</div></div></div>
-  <div class="benefit"><div class="bicon">⚡</div><div><div class="bname">Boosts Energy</div><div class="bsub">No crash, no jitters</div></div></div>
-  <div class="benefit"><div class="bicon">🧘</div><div><div class="bname">Calms the Mind</div><div class="bsub">L-theanine for focus</div></div></div>
-  <div class="benefit"><div class="bicon">💪</div><div><div class="bname">Supports Immunity</div><div class="bsub">Vitamins C, A &amp; E</div></div></div>
+  <div class="benefit"><div class="bicon">#</div><div><div class="bname">Rich in Antioxidants</div><div class="bsub">Fights free radicals</div></div></div>
+  <div class="benefit"><div class="bicon">+</div><div><div class="bname">Boosts Energy</div><div class="bsub">No crash, no jitters</div></div></div>
+  <div class="benefit"><div class="bicon">~</div><div><div class="bname">Calms the Mind</div><div class="bsub">L-theanine for focus</div></div></div>
+  <div class="benefit"><div class="bicon">*</div><div><div class="bname">Supports Immunity</div><div class="bsub">Vitamins C, A &amp; E</div></div></div>
 </div>
 <div class="cta">Try It Now At Our Shop</div>
 <div class="shopname">Friends Fruit Juice &amp; Ice Cream</div>
